@@ -132,8 +132,8 @@ while(!feof(AddressBook)){
 	fscanf(AddressBook,"%s %s %s %s %s\n",
              record.id, record.firstName, record.lastName, record.phoneNum,
              record.adress);
-    //delete line  
-    if(stricmp(number, record.id)!=0)
+    //if on windows use stricmp 
+    if(strcasecmp(number, record.id)!=0)
         fprintf(fdel,"%s %s %s %s %s\n",
              record.id, record.firstName, record.lastName, record.phoneNum,
              record.adress);
